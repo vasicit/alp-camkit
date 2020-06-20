@@ -17,6 +17,7 @@ $path = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search"
         New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows" -Name "Windows Search" 
     }  
     Set-ItemProperty -Path $path -Name "AllowCortana" -Value 1  
+    Write-Host "Cortana Disabled"
     #Restart Explorer to change it immediately     
     Stop-Process -name explorer
-Write-Host "Cortana Disabled"
+
